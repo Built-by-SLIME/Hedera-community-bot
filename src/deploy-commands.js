@@ -34,7 +34,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
   try {
     console.log('Registering slash commands...');
     await rest.put(
-      Routes.applicationCommands('1388896157958406294'),
+      Routes.applicationCommands(process.env.DISCORD_CLIENT_ID || 'YOUR_DISCORD_CLIENT_ID_HERE'),
       { body: commands }
     );
     console.log('Commands registered successfully!');

@@ -1,17 +1,36 @@
 {
-  "name": "slime-discord-bot",
+  "name": "hedera-community-discord-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A powerful, open-source Discord bot for the Hedera ecosystem that verifies NFT ownership, manages community roles, and provides automated features for Hedera-based Discord servers.",
+  "main": "src/bot.js",
   "scripts": {
     "start": "node src/bot.js",
     "deploy": "node src/deploy-commands.js",
     "deploy-commands": "node src/deploy-commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "discord",
+    "bot",
+    "hedera",
+    "nft",
+    "verification",
+    "blockchain",
+    "community",
+    "roles",
+    "giveaway",
+    "hashgraph"
+  ],
+  "author": "Built by SLIME <https://github.com/Built-by-SLIME>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Built-by-SLIME/Hedera-community-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Built-by-SLIME/Hedera-community-bot/issues"
+  },
+  "homepage": "https://github.com/Built-by-SLIME/Hedera-community-bot#readme",
   "dependencies": {
     "@hashgraph/sdk": "^2.49.2",
     "axios": "^1.7.2",

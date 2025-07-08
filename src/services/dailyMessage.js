@@ -3,7 +3,7 @@ const cron = require('node-cron');
 class DailyMessage {
   constructor(client) {
     this.client = client;
-    this.channelId = '1390767953825239202';
+    this.channelId = process.env.DAILY_MESSAGE_CHANNEL_ID || 'YOUR_DAILY_MESSAGE_CHANNEL_ID_HERE';
     this.isRunning = false;
     
     // Array of daily messages to randomly select from

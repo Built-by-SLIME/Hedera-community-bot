@@ -36,7 +36,7 @@ async function deployCommands() {
     const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
     await rest.put(
-      Routes.applicationCommands('1388896157958406294'),
+      Routes.applicationCommands(process.env.DISCORD_CLIENT_ID || 'YOUR_DISCORD_CLIENT_ID_HERE'),
       { body: commands }
     );
 
@@ -74,7 +74,7 @@ client.once('ready', async () => {
 // Welcome message when new members join
 client.on('guildMemberAdd', async (member) => {
   try {
-    const welcomeChannelId = '1299910255844790316';
+    const welcomeChannelId = process.env.WELCOME_CHANNEL_ID || 'YOUR_WELCOME_CHANNEL_ID_HERE';
     const welcomeChannel = member.guild.channels.cache.get(welcomeChannelId);
 
     if (welcomeChannel) {
